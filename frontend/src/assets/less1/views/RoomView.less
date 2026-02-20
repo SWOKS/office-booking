@@ -1,0 +1,80 @@
+@import "../var.less";
+
+.room-page { padding:20px; background: linear-gradient(180deg, fade(@background, 80%), @background); min-height:100vh; box-sizing:border-box; position:relative }
+.room-container { max-width:1100px; margin:18px auto; display:grid; grid-template-columns:1fr 380px; gap:24px; align-items:start; padding:18px }
+.room-gallery { display:flex; flex-direction:column; gap:12px }
+.gallery-main { position:relative; background:#fff; border-radius:10px; box-shadow:0 6px 18px rgba(15,23,42,0.06); overflow:hidden; display:flex; align-items:center; justify-content:center; min-height:360px }
+.gallery-image { width:100%; height:100%; max-height:70vh; display:block; object-fit:contain; object-position:center center; }
+.gallery-placeholder { font-size:48px; color:darken(@muted,10%); opacity:0.5 }
+.gallery-counter { position:absolute; right:12px; bottom:12px; background:rgba(0,0,0,0.5); color:#fff; padding:6px 10px; border-radius:999px; font-size:13px }
+
+/* Кнопка «назад» в стиле danger */
+.top-back { 
+	position:absolute; 
+	top:18px; 
+	left:18px; 
+	z-index:30; 
+	.btn-base();
+	.btn-variant--danger();
+	padding:8px 12px;
+	border-radius:8px;
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+}
+
+
+/* Кнопки переключения изображений галереи */
+.gallery-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255,255,255,0.85);
+	border: 0;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0 4px 10px rgba(2,6,23,0.08);
+}
+.gallery-btn.prev { left: 12px; }
+.gallery-btn.next { right: 12px; }
+
+.gallery-thumbnails { display:flex; gap:8px; overflow-x:auto; padding-bottom:4px }
+.thumbnail { border:none; padding:0; background:transparent; cursor:pointer; flex:0 0 auto; border-radius:6px }
+.thumbnail-img { width:96px; height:64px; display:block; object-fit:cover; border-radius:6px; opacity:0.9; transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease }
+.thumbnail.active .thumbnail-img, .thumbnail:hover .thumbnail-img { transform:translateY(-3px); box-shadow:0 6px 18px rgba(2,6,23,0.12); opacity:1 }
+
+.room-details { background:#fff; border-radius:10px; padding:18px; box-shadow:0 6px 18px rgba(15,23,42,0.04) }
+.room-page .room-details, .room-page .room-details h2, .room-page .room-details p { color:#111 }
+.room-details h2 { margin:0 0 8px 0; font-size:22px; line-height:1.15 }
+.room-header-info { display:flex; gap:12px; align-items:center; margin-bottom:12px; color:@muted }
+.price { font-weight:700; color:@primary }
+.capacity { font-size:14px }
+.description { color:@muted; line-height:1.5; margin-bottom:14px }
+.amenities { margin-bottom:14px }
+.amenities-list { display:flex; flex-wrap:wrap; gap:8px }
+.amenity-tag { background: @background-light-green; color: @text-light; padding:6px 8px; border-radius:6px; font-size:13px }
+.amenity-highlight { background: @background-light-green; color: @text-light; font-weight:600 }
+.booking-form h3 { margin-top:0 }
+.form-group { margin-bottom:10px }
+.form-row { display:flex; gap:8px }
+.form-row .form-group { flex:1 }
+label { display:block; margin-bottom:6px; font-size:13px; color:@muted }
+input[type="date"], input[type="time"], input[type="text"] { width:100%; padding:8px 10px; border-radius:6px; border:1px solid fade(@muted,80%); background:#fff }
+.price-calculation { margin:10px 0 }
+.error-text { color:#b91c1c }
+.form-actions { display:flex; gap:10px; justify-content:flex-end; margin-top:12px }
+.btn { .btn-base(); }
+.btn-secondary { .btn-base(); .btn-variant--secondary(); }
+.btn-confirm { .btn-base(); .btn-variant--accent(); }
+.btn:disabled { opacity:.6; cursor:not-allowed }
+
+@media (max-width:980px) { .room-container { grid-template-columns:1fr; padding:12px } .room-details { order:2 } .room-gallery { order:1 } }
+@media (max-width:480px) {
+	.thumbnail-img { width:72px; height:48px; }
+	.gallery-main { min-height:240px; }
+}

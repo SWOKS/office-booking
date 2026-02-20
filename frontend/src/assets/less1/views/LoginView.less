@@ -1,0 +1,16 @@
+@import "../var.less";
+
+.login-container { min-height: calc(100vh - 200px); display:flex; justify-content:center; align-items:center; padding:20px; background-color:@background }
+.login-box { background:white; padding:40px; border-radius:10px; box-shadow:0 10px 40px rgba(0,0,0,0.2); width:100%; max-width:400px; border-top:4px solid @primary }
+h1 { text-align:center; color:@primary; margin-bottom:10px; font-size:28px; font-weight:600 }
+.demo-info { background-color: rgba(56,102,65,0.05); padding:15px; border-radius:6px; margin-bottom:25px; font-size:13px; color:@text-light; border-left:4px solid @primary }
+.form-group { margin-bottom:20px }
+label { display:block; margin-bottom:8px; font-weight:600; color:@primary; font-size:14px }
+input { width:100%; padding:12px; border:2px solid @border; border-radius:6px; font-size:14px }
+.error-message { background-color: rgba(188,71,73,0.1); color:@danger; padding:12px; border-radius:6px; margin-bottom:20px; font-size:14px; border-left:4px solid @danger; font-weight:600 }
+.btn { .btn-base(); width:100% }
+.btn-login { .btn-base(); .btn-variant--primary(); width:100% }
+.login-link, .register-link { text-align:center; font-size:14px; color:@text }
+.login-link a, .register-link a { color:@primary; font-weight:600; text-decoration:none }
+
+@media (max-width:480px) { .login-box{padding:30px 20px} h1{font-size:24px} .btn{padding:10px; font-size:15px} }

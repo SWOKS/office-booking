@@ -1,0 +1,29 @@
+@import "../var.less";
+
+.admin-view { min-height: calc(100vh - 200px); background-color:@background; padding:40px 20px }
+.admin-header { max-width:@max-width; margin:0 auto 40px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap }
+.admin-header h1 { font-size:32px; color:@primary; margin:0; font-weight:600 }
+.btn-back, .btn-logout-admin { .btn-base(); .btn-variant--danger(); padding:12px 25px }
+.admin-container { max-width:@max-width; margin:0 auto; background:white; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.08); overflow:hidden }
+.tabs { display:flex; border-bottom:3px solid @border-light; background:#f9f9f9; flex-wrap:wrap }
+.tab { flex:1; min-width:120px; padding:18px 20px; background:transparent; font-size:15px; font-weight:600; cursor:pointer; color:@text-light; position:relative }
+.tab:hover { background-color: rgba(56,102,65,0.05); color:@primary }
+.tab.active { color:@primary; background:@background-light-green }
+.tab.active::after { content: ''; position:absolute; bottom:-3px; left:0; right:0; height:3px; background-color:@primary }
+.tab-content { padding:30px }
+table { width:100%; border-collapse:collapse; margin-bottom:20px }
+th { padding:15px; text-align:left; font-weight:600; color:@primary; font-size:13px; text-transform:uppercase }
+td { padding:15px; color:@text-light; font-size:14px; border-bottom:1px solid @border-light }
+.rooms-admin-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px }
+.room-admin-card { background:#f9f9f9; border:2px solid @border-light; border-radius:10px; padding:20px }
+.room-admin-card:hover { border-color:@primary; box-shadow:0 4px 12px rgba(56,102,65,0.15); transform:translateY(-4px) }
+.room-admin-actions { display:flex; gap:10px; margin-top:15px; flex-wrap:wrap }
+.btn-action { .btn-base(); padding:8px 12px; font-size:12px; min-width:80px }
+.btn-edit { .btn-base(); .btn-variant--secondary() }
+.btn-delete { .btn-base(); .btn-variant--danger() }
+.btn-delete-small { .btn-base(); .btn-variant--danger(); padding:8px 10px; font-size:13px }
+
+.amenity-badge { background-color: @background-light-green; color: @text-light; padding:6px 10px; border-radius:6px; margin-right:6px; display:inline-block }
+
+@media (max-width:1200px) { .rooms-admin-grid { grid-template-columns: repeat(2,1fr); gap:20px } .admin-header h1{font-size:28px} }
+@media (max-width:768px) { .admin-view{padding:25px 15px} .admin-header{flex-direction:column; align-items:flex-start} }

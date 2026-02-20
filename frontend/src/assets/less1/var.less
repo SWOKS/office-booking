@@ -1,0 +1,73 @@
+@primary: rgb(56, 102, 65);
+@primary-light: rgb(106, 153, 78);
+@primary-lighter: rgb(167, 201, 87);
+@accent: rgb(242, 232, 207);
+@danger: rgb(188, 71, 73);
+
+@text: #000;
+@text-light: #333;
+@muted: #999;
+@background: #fafafa;
+@border: #ddd;
+@border-light: #efefef;
+@max-width: 1400px;
+
+// Цвет фона для бейджей и иконок социальных сетей
+@background-light-green: rgba(167,201,87,0.12);
+
+/* Устаревшие алиасы удалены, используются миксины */
+@btn-shadow-sm: 0 4px 12px rgba(56, 102, 65, 0.16);
+
+@space-sm: 8px;
+@space-md: 16px;
+@space-lg: 24px;
+
+@font-family-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+@font-size-base: 14px;
+
+/* Миксины для общих стилей (включая кнопки) */
+.btn-base() {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+
+
+.btn-variant--primary() {
+  background-color: @primary;
+  color: white;
+  border: none;
+  &:hover:not(:disabled) { background-color: darken(@primary, 6%); transform: translateY(-2px); box-shadow: @btn-shadow-sm; }
+}
+
+.btn-variant--secondary() {
+  background-color: @primary-light;
+  color: white;
+  &:hover:not(:disabled) { background-color: @primary; transform: translateY(-2px); box-shadow: @btn-shadow-sm; }
+}
+
+.btn-variant--accent() {
+  background-color: @accent;
+  color: @primary;
+  border: 2px solid @accent;
+  &:hover { background-color: darken(@accent, 8%); }
+}
+
+.btn-variant--danger() {
+  background-color: @danger;
+  color: white;
+  &:hover:not(:disabled) { background-color: darken(@danger, 6%); transform: translateY(-1px); }
+}
+
+.btn-variant--outline() {
+  background: transparent;
+  border: 2px solid @primary;
+  color: @primary;
+  &:hover { background-color: @primary-light; color: white; }
+}

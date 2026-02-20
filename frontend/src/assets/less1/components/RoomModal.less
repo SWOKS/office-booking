@@ -1,0 +1,100 @@
+@import "../var.less";
+
+.modal-overlay { position: fixed; inset:0; background-color: rgba(0,0,0,0.7); display:flex; align-items:center; justify-content:center; z-index:100000; padding:20px; animation:fadeIn .3s ease; -webkit-overflow-scrolling: touch; }
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+.modal-content { background:white; border-radius:12px; max-width:900px; width:100%; max-height:calc(100vh - 40px); overflow-y:auto; position:relative; box-shadow:0 30px 80px rgba(0,0,0,0.45); animation:slideIn .3s ease; margin:0 auto; -webkit-overflow-scrolling:touch; overscroll-behavior:contain; width: min(900px, 98vw); }
+@keyframes slideIn { from{ transform: translateY(30px); opacity:0 } to{ transform: translateY(0); opacity:1 } }
+
+.close-btn { position:absolute; top:15px; right:15px; background-color: rgba(255,255,255,0.9); border:none; width:40px; height:40px; border-radius:50%; font-size:24px; cursor:pointer; z-index:10; transition:all .3s; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
+.close-btn:hover { background-color:white; transform:scale(1.1); }
+
+/* Кнопка закрытия с акцентным оформлением */
+.close-btn--danger { background-color: @danger; color: white !important; }
+
+.room-gallery { margin-bottom:30px }
+.gallery-main { position:relative; width:100%; height:350px; background:@background; background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:8px }
+.gallery-image { width:100%; height:100%; object-fit:contain; object-position:center; display:block; background-color:#fff; border-radius:6px }
+.gallery-placeholder { font-size:120px; font-weight:bold; opacity:0.18; color:rgba(0,0,0,0.6) }
+.gallery-counter { position:absolute; bottom:15px; right:15px; background-color: rgba(0,0,0,0.6); color:white; padding:8px 12px; border-radius:6px; font-size:13px; font-weight:600 }
+
+/* Кнопки навигации галереи (prev/next) */
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  color: @primary;
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  transition: all 0.18s;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+
+  &:hover {
+    transform: translateY(-3px);
+    background-color: white;
+  }
+
+  &.prev { left: 12px; }
+  &.next { right: 12px; }
+}
+
+.btn-choose { position:absolute; left:15px; bottom:15px; background-color:@primary; color:white; border:none; padding:10px 14px; border-radius:8px; font-weight:700; cursor:pointer; box-shadow:0 8px 22px rgba(56,102,65,0.18); transition:all .18s }
+.btn-choose:hover { transform:translateY(-2px) }
+
+.gallery-thumbnails { display:flex; gap:12px; padding:12px; justify-content:center; flex-wrap:wrap }
+.thumbnail { width:56px; height:56px; background-color: rgba(167,201,87,0.12); border:2px solid transparent; border-radius:8px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; transition:all .18s }
+.thumbnail:hover { border-color:@primary; transform:translateY(-2px) }
+.thumbnail .thumbnail-img { width:100%; height:100%; object-fit:cover; display:block; border-radius:8px }
+.thumbnail.active { background-color:@primary; color:white; border-color:@primary }
+
+.room-details { padding:30px }
+.room-details h2 { font-size:28px; margin-bottom:12px; color:@primary; font-weight:600 }
+
+.room-page .room-details { background:@background; color:@text; border-radius:10px; padding:28px }
+/* Стили деталей комнаты в модальном окне */
+.room-page .room-details h2, .room-page .room-details .price, .room-page .room-details .capacity, .room-page .room-details .description { color: @text }
+
+.room-header-info { display:flex; gap:25px; margin-bottom:20px; flex-wrap:wrap }
+.price { font-size:22px; font-weight:bold; color:@danger }
+.capacity { font-size:16px; color:@text }
+.description { color:@text; line-height:1.6; margin-bottom:25px; font-size:15px }
+
+.amenities h3 { margin-bottom:12px; color:@primary; font-size:16px; font-weight:600 }
+.amenities-list { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:25px }
+.amenity-tag { background-color: @background-light-green; color:@text-light; padding:8px 14px; border-radius:6px; font-size:13px; border-left:3px solid fade(@primary,30%); font-weight:600 }
+.amenity-highlight { background-color:@background-light-green; color:@text-light; border-left:3px solid fade(@primary,30%); font-weight:600 }
+
+.booking-form { background-color:@background; padding:25px; border-radius:10px; border:2px solid @border; margin-top:25px }
+.form-group { margin-bottom:18px }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-bottom:18px }
+.form-group label { display:block; margin-bottom:8px; font-weight:600; color:@primary; font-size:14px }
+.form-group input { width:100%; padding:12px; border:2px solid @border; border-radius:6px; font-size:14px; transition:border-color .3s }
+.form-group input:focus { outline:none; border-color:@primary; background-color: rgba(56,102,65,0.05) }
+
+.price-calculation { background-color:white; padding:15px; border-radius:6px; margin-bottom:20px; border-left:4px solid @primary }
+.price-calculation p { margin-bottom:8px; font-size:14px; color:@text-light }
+.price-calculation .error-text { color:@danger; background-color: rgba(188,71,73,0.1); padding:10px 12px; border-radius:4px; font-weight:600 }
+
+.form-actions { display:grid; grid-template-columns:1fr; gap:12px; margin-top:20px }
+.btn { .btn-base(); }
+.btn-cancel { .btn-base(); }
+.btn-confirm { .btn-base(); .btn-variant--primary(); width:100% }
+
+@media (max-width:600px) {
+  .modal-overlay { padding:10px }
+  .modal-content { border-radius:8px }
+  .room-details { padding:20px }
+  .gallery-main { height:250px }
+  .gallery-placeholder { font-size:80px }
+  .form-row { grid-template-columns:1fr }
+  .amenities-list { flex-direction:column }
+  .form-actions { grid-template-columns:1fr }
+}

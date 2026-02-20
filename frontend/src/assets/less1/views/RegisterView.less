@@ -1,0 +1,16 @@
+@import "../var.less";
+
+.register-container { min-height: calc(100vh - 200px); display:flex; justify-content:center; align-items:center; padding:20px; background-color:@background }
+.register-box { background:white; padding:40px; border-radius:10px; box-shadow:0 10px 40px rgba(0,0,0,0.2); width:100%; max-width:450px }
+h1 { text-align:center; color:#333; margin-bottom:10px; font-size:28px }
+.form-group { margin-bottom:18px }
+label { display:block; margin-bottom:8px; font-weight:600; color:#333; font-size:14px }
+input { width:100%; padding:12px; border:2px solid #e0e0e0; border-radius:6px; font-size:14px }
+.error-message { background-color:#ffebee; color:#c62828; padding:12px; border-radius:6px; margin-bottom:20px; font-size:14px; border-left:4px solid #c62828 }
+.success-message { background-color:#e8f5e9; color:#2e7d32; padding:12px; border-radius:6px; margin-bottom:20px; font-size:14px; border-left:4px solid #2e7d32 }
+.btn { .btn-base(); width:100% }
+
+@media (max-width:480px) { .register-box{padding:30px 20px} h1{font-size:24px} .btn{padding:10px; font-size:15px} }
+
+.login-link { text-align:center; font-size:14px; color:@text }
+.login-link a { color:@primary; font-weight:600; text-decoration:none }

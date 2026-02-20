@@ -1,0 +1,326 @@
+[
+  {
+    "id": 1,
+    "name": "Комната 1",
+    "description": "Уютная переговорная для рабочих встреч и небольших презентаций",
+    "capacity": 4,
+    "price": 500,
+    "images": [
+      "/images/rooms/room-a-1.png",
+      "/images/rooms/room-a-2.png",
+      "/images/rooms/room-a-3.png"
+    ],
+    "amenities": ["Wi-Fi", "Стол", "Стулья", "Проектор", "Доска", "Кофе-машина"],
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Комната 2",
+    "description": "Просторная комната с экраном для презентаций и совещаний",
+    "capacity": 8,
+    "price": 1200,
+    "images": [
+      "/images/rooms/room-b-1.png",
+      "/images/rooms/room-b-2.png",
+      "/images/rooms/room-b-3.png"
+    ],
+    "amenities": ["Wi-Fi", "Стол", "Стулья", "Большой экран", "Видеоконференция", "Доска"],
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Комната 3",
+    "description": "Элегантный кабинет для руководящих встреч",
+    "capacity": 6,
+    "price": 800,
+    "images": [
+      "/images/rooms/room-c-1.png",
+      "/images/rooms/room-c-2.png",
+      "/images/rooms/room-c-3.png"
+    ],
+    "amenities": ["Wi-Fi", "Стол", "Стулья", "Проектор", "Мини-холодильник", "Доска"],
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Комната 4",
+    "description": "Компактная переговорная для индивидуальных встреч и звонков",
+    "capacity": 2,
+    "price": 300,
+    "images": [
+      "/images/rooms/room-d-1.png",
+      "/images/rooms/room-d-2.png",
+      "/images/rooms/room-d-3.png"
+    ],
+    "amenities": ["Wi-Fi", "Стол", "Стулья", "Монитор", "Удобные кресла"],
+    "available": true
+  },
+  {
+    "id": 5,
+    "name": "Комната 5",
+    "description": "Современная конференц-зала для больших презентаций",
+    "capacity": 10,
+    "price": 1500,
+    "images": [
+      "/images/rooms/room-e-1.png",
+      "/images/rooms/room-e-2.png",
+      "/images/rooms/room-e-3.png"
+    ],
+    "amenities": ["Wi-Fi", "Стол", "Стулья", "4K проектор", "Видеоконференция", "Звук", "Белая доска"],
+    "available": true
+  },
+  {
+    "id": 6,
+    "name": "Комната 6",
+    "description": "Бюджетная комната для рабочих встреч",
+    "capacity": 3,
+    "price": 400,
+    "images": [
+      "/images/rooms/room-f-1.png",
+      "/images/rooms/room-f-2.png",
+      "/images/rooms/room-f-3.png"
+    ],
+    "amenities": ["Wi-Fi", "Стол", "Стулья", "Проектор"],
+    "available": true
+  },
+  {
+    "id": 7,
+    "name": "Комната 7",
+    "description": "Удобная небольшая комната для интервью и звонков",
+    "capacity": 2,
+    "price": 350,
+    "images": ["/images/rooms/room-a-1.png","/images/rooms/room-a-2.png","/images/rooms/room-a-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Монитор","Кондиционер"],
+    "available": true
+  },
+  {
+    "id": 8,
+    "name": "Комната 8",
+    "description": "Яркая переговорная с естественным светом",
+    "capacity": 5,
+    "price": 700,
+    "images": ["/images/rooms/room-b-1.png","/images/rooms/room-b-2.png","/images/rooms/room-b-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Телевизор","Чайник"],
+    "available": true
+  },
+  {
+    "id": 9,
+    "name": "Комната 9",
+    "description": "Тихая комната для фокусной работы",
+    "capacity": 1,
+    "price": 250,
+    "images": ["/images/rooms/room-c-1.png","/images/rooms/room-c-2.png","/images/rooms/room-c-3.png"],
+    "amenities": ["Wi-Fi","Стул","Стол","Удобные кресла"],
+    "available": true
+  },
+  {
+    "id": 10,
+    "name": "Комната 10",
+    "description": "Креативное пространство для мозгового штурма",
+    "capacity": 6,
+    "price": 850,
+    "images": ["/images/rooms/room-d-1.png","/images/rooms/room-d-2.png","/images/rooms/room-d-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Доска","Кофе-машина"],
+    "available": true
+  },
+  {
+    "id": 11,
+    "name": "Комната 11",
+    "description": "Современный хаб для небольших команд",
+    "capacity": 8,
+    "price": 1100,
+    "images": ["/images/rooms/room-e-1.png","/images/rooms/room-e-2.png","/images/rooms/room-e-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Проектор","Звук"],
+    "available": true
+  },
+  {
+    "id": 12,
+    "name": "Комната 12",
+    "description": "Мини-офис для конфиденциальных встреч",
+    "capacity": 3,
+    "price": 450,
+    "images": ["/images/rooms/room-f-1.png","/images/rooms/room-f-2.png","/images/rooms/room-f-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Мини-холодильник"],
+    "available": true
+  },
+  {
+    "id": 13,
+    "name": "Комната 13",
+    "description": "Просторная переговорная с возможностью видеозвонков",
+    "capacity": 12,
+    "price": 1600,
+    "images": ["/images/rooms/room-a-1.png","/images/rooms/room-b-2.png","/images/rooms/room-c-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Видеоконференция","Большой экран","Звук"],
+    "available": true
+  },
+  {
+    "id": 14,
+    "name": "Комната 14",
+    "description": "Уютный кабинет с мягкими креслами",
+    "capacity": 4,
+    "price": 600,
+    "images": ["/images/rooms/room-d-1.png","/images/rooms/room-e-2.png","/images/rooms/room-f-3.png"],
+    "amenities": ["Wi-Fi","Удобные кресла","Кофе-машина","Чайник"],
+    "available": true
+  },
+  {
+    "id": 15,
+    "name": "Комната 15",
+    "description": "Переговорная с большим столом для командной работы",
+    "capacity": 10,
+    "price": 1400,
+    "images": ["/images/rooms/room-a-2.png","/images/rooms/room-b-1.png","/images/rooms/room-c-1.png"],
+    "amenities": ["Wi-Fi","Большой экран","Стол","Стулья","Доска"],
+    "available": true
+  },
+  {
+    "id": 16,
+    "name": "Комната 16",
+    "description": "Небольшая переговорная в тихом уголке офиса",
+    "capacity": 3,
+    "price": 420,
+    "images": ["/images/rooms/room-b-3.png","/images/rooms/room-c-2.png","/images/rooms/room-d-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Монитор"],
+    "available": true
+  },
+  {
+    "id": 17,
+    "name": "Комната 17",
+    "description": "Комната для презентаций и обучений",
+    "capacity": 15,
+    "price": 2000,
+    "images": ["/images/rooms/room-e-1.png","/images/rooms/room-e-2.png","/images/rooms/room-e-3.png"],
+    "amenities": ["Wi-Fi","4K проектор","Звук","Видеоконференция","Стулья"],
+    "available": true
+  },
+  {
+    "id": 18,
+    "name": "Комната 18",
+    "description": "Небольшая переговорная с экраном",
+    "capacity": 6,
+    "price": 750,
+    "images": ["/images/rooms/room-f-1.png","/images/rooms/room-f-2.png","/images/rooms/room-f-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Телевизор"],
+    "available": true
+  },
+  {
+    "id": 19,
+    "name": "Комната 19",
+    "description": "Кабинет для переговоров с руководством",
+    "capacity": 6,
+    "price": 900,
+    "images": ["/images/rooms/room-a-3.png","/images/rooms/room-b-3.png","/images/rooms/room-c-2.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Мини-холодильник","Доска"],
+    "available": true
+  },
+  {
+    "id": 20,
+    "name": "Комната 20",
+    "description": "Яркая и просторная для тренингов",
+    "capacity": 18,
+    "price": 2200,
+    "images": ["/images/rooms/room-d-1.png","/images/rooms/room-e-2.png","/images/rooms/room-f-1.png"],
+    "amenities": ["Wi-Fi","Проектор","Звук","Видеоконференция","Стулья"],
+    "available": true
+  },
+  {
+    "id": 21,
+    "name": "Комната 21",
+    "description": "Удобная переговорная рядом с коворкинг-зоной",
+    "capacity": 4,
+    "price": 550,
+    "images": ["/images/rooms/room-a-1.png","/images/rooms/room-b-1.png","/images/rooms/room-c-1.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Кофе-машина"],
+    "available": true
+  },
+  {
+    "id": 22,
+    "name": "Комната 22",
+    "description": "Тихая комната для планерок и созвонов",
+    "capacity": 5,
+    "price": 650,
+    "images": ["/images/rooms/room-d-2.png","/images/rooms/room-e-3.png","/images/rooms/room-f-2.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Монитор"],
+    "available": true
+  },
+  {
+    "id": 23,
+    "name": "Комната 23",
+    "description": "Переговорная с мягкой мебелью для неформальных встреч",
+    "capacity": 6,
+    "price": 780,
+    "images": ["/images/rooms/room-a-2.png","/images/rooms/room-b-2.png","/images/rooms/room-c-2.png"],
+    "amenities": ["Wi-Fi","Удобные кресла","Чайник","Доска"],
+    "available": true
+  },
+  {
+    "id": 24,
+    "name": "Комната 24",
+    "description": "Маленькая переговорная для быстрых встреч",
+    "capacity": 2,
+    "price": 320,
+    "images": ["/images/rooms/room-d-3.png","/images/rooms/room-e-1.png","/images/rooms/room-f-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья"],
+    "available": true
+  },
+  {
+    "id": 25,
+    "name": "Комната 25",
+    "description": "Переговорная с возможностью гибкой расстановки мебели",
+    "capacity": 9,
+    "price": 1300,
+    "images": ["/images/rooms/room-a-3.png","/images/rooms/room-b-1.png","/images/rooms/room-c-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Большой экран"],
+    "available": true
+  },
+  {
+    "id": 26,
+    "name": "Комната 26",
+    "description": "Кабинет с кондиционером и уютной атмосферой",
+    "capacity": 4,
+    "price": 600,
+    "images": ["/images/rooms/room-d-1.png","/images/rooms/room-d-2.png","/images/rooms/room-d-3.png"],
+    "amenities": ["Wi-Fi","Кондиционер","Стол","Стулья"],
+    "available": true
+  },
+  {
+    "id": 27,
+    "name": "Комната 27",
+    "description": "Большая переговорная для собраний отделов",
+    "capacity": 20,
+    "price": 2600,
+    "images": ["/images/rooms/room-e-1.png","/images/rooms/room-e-2.png","/images/rooms/room-e-3.png"],
+    "amenities": ["Wi-Fi","Проектор","Звук","Видеоконференция","Стулья"],
+    "available": true
+  },
+  {
+    "id": 28,
+    "name": "Комната 28",
+    "description": "Маленькая переговорная для собеседований",
+    "capacity": 2,
+    "price": 300,
+    "images": ["/images/rooms/room-f-1.png","/images/rooms/room-f-2.png","/images/rooms/room-f-3.png"],
+    "amenities": ["Wi-Fi","Стол","Стулья","Телевизор"],
+    "available": true
+  },
+  {
+    "id": 29,
+    "name": "Комната 29",
+    "description": "Креативная комната с доской и маркерами",
+    "capacity": 7,
+    "price": 900,
+    "images": ["/images/rooms/room-a-1.png","/images/rooms/room-b-2.png","/images/rooms/room-c-1.png"],
+    "amenities": ["Wi-Fi","Доска","Стол","Стулья","Кофе-машина"],
+    "available": true
+  },
+  {
+    "id": 30,
+    "name": "Комната 30",
+    "description": "Просторная конференц-зала с отличной видимостью",
+    "capacity": 16,
+    "price": 2100,
+    "images": ["/images/rooms/room-d-2.png","/images/rooms/room-e-2.png","/images/rooms/room-f-2.png"],
+    "amenities": ["Wi-Fi","Большой экран","Звук","Стулья","Проектор"],
+    "available": true
+  }
+]

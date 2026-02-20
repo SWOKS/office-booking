@@ -1,0 +1,23 @@
+{
+  "name": "office-booking-backend",
+  "version": "1.0.0",
+  "description": "Backend сервер для приложения бронирования переговорных комнат",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "office",
+    "booking",
+    "rooms",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
+  }
+}
