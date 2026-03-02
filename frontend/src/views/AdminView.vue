@@ -55,7 +55,7 @@
                 class="booking-row"
               >
                 <td class="id">{{ booking.id }}</td>
-                <td>{{ booking.userName }}</td>
+                <td>{{ booking.username }}</td>
                 <td>{{ booking.roomName }}</td>
                 <td>{{ formatDate(booking.date) }}</td>
                 <td>{{ booking.startTime }} - {{ booking.endTime }}</td>
@@ -130,7 +130,6 @@
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Имя</th>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Роль</th>
@@ -140,7 +139,6 @@
             <tbody>
               <tr v-for="user in users" :key="user.id" class="user-row">
                 <td class="id">{{ user.id }}</td>
-                <td>{{ user.name }}</td>
                 <td>
                   <code>{{ user.username }}</code>
                 </td>
