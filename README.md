@@ -1,52 +1,82 @@
-# OfficeBook — Сервис бронирования переговорных комнат
+# 🏢 OfficeBook
 
-Короткое описание
-- Простая система бронирования переговорных комнат для офиса.
-- Управление пользователями, список комнат, бронирования по датам/времени, админ-панель.
+Веб-приложение для бронирования переговорных комнат в офисе.
 
-Скриншоты
-- Папка с изображениями: `frontend/public/images/rooms/` (используется для демонстрации комнат).
+## Возможности
 
-Быстрый старт (локальная разработка)
+Пользователь:
+- Регистрация и вход
+- Просмотр доступных комнат
+- Бронирование по дате и времени
+- Просмотр своих бронирований
+
+Администратор:
+- Просмотр всех пользователей
+- Контроль всех бронирований
+
+## Технологии
+
+Frontend:
+- Vue 3
+- Vue Router
+- LESS
+
+Backend:
+- Node.js
+- Express
+- PostgreSQL
+- Swagger (API документация)
+
+## Структура проекта
+
+office-booking/
+├── frontend/   # Vue приложение
+├── backend/    # Node.js сервер
+└── README.md
+
+## Запуск проекта
 
 1. Клонировать репозиторий:
 
-   git clone <репо-url>
-   cd office-booking
+git clone <repo-url>
+cd office-booking
 
-2. Запустить бэкенд:
+2. Запустить backend:
 
-   cd backend
-   npm install
-   npm run dev
+cd backend
+npm install
+npm run dev
 
-   По умолчанию сервер доступен на `http://localhost:3000` (если `server.js` настроен так).
+Сервер: http://localhost:3000  
+Swagger: http://localhost:3000/api-docs  
 
-3. Запустить фронтенд:
+3. Запустить frontend:
 
-   cd frontend
-   npm install
-   npm run dev
+cd frontend
+npm install
+npm run dev
 
-   Фронтенд по умолчанию запускается на `http://localhost:8080` (vue-cli).
+Frontend: http://localhost:8080  
 
-Сборка для продакшена
+## Настройка базы данных
 
-- Фронтенд: в `frontend` выполнить `npm run build` — собранные файлы появятся в `frontend/dist`.
-- Бэкенд: при необходимости запустить `node server.js` или настроить процесс-менеджер (pm2/systemd).
+Создать файл .env в папке backend:
 
-Технологический стек
-- Фронтенд: Vue 3, Vue Router, LESS
-- Стили: LESS
-- Бэкенд: Node.js, Express
-- Хранилище: PostgreSQL
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=your_user
+DB_PASSWORD=your_password
+DB_NAME=office_booking
+PORT=3000
 
-Структура репозитория (основные папки)
-- `frontend/` — Vue приложение
-- `backend/` — Node/Express сервер
+## Сборка
 
-Лицензия
-- Проект распространяется под лицензией MIT. См. файл `LICENSE`.
+Frontend:
+npm run build
 
-Контакты
-- Для вопросов открывайте issue или создавайте pull request.
+Backend:
+node server.js
+
+## Лицензия
+
+MIT
