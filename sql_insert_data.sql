@@ -3,17 +3,17 @@ BEGIN;
 -- ============================================
 -- 1. ВСТАВКА ПОЛЬЗОВАТЕЛЕЙ (10 штук)
 -- ============================================
-INSERT INTO users (id, username, password, email, name, role) VALUES
-(1, 'admin', 'admin123', 'admin@office.com', 'Администратор', 'admin'),
-(2, 'user1', 'user123', 'user1@office.com', 'Пользователь', 'user'),
-(3, 'user', '111111', 'vladimirpronicev56@gmail.com', 'Вова', 'user'),
-(4, 'swoks', '123456', 'vladproni4ev@yandex.ru', 'Проничев Владимир Андреевич', 'user'),
-(5, 'цццццццццццццццццццццццццццццц', 'кнопку отмена тоже сделай красной', 'wdwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww@ds', 'цццццццццццццццццццццццццццццц', 'user'),
-(6, 'wwwwww', '111111', 'KondratevaTV@mail.ru', 'wwwwww', 'user'),
-(7, 'ххх', 'Vvr-BsT-PHH-5j9', 'vladproni5ev@yandex.ru', 'ххх', 'user'),
-(8, 'dima', '111111', 'dima@mail.ru', 'dima', 'user'),
-(9, 'vova', '111111', 'vova@mail.ru', 'vova', 'user'),
-(10, 'user111', '111111', 'user111@gmail.com', 'user111', 'user');
+INSERT INTO users (id, username, password, email, role) VALUES
+(1, 'admin', 'admin123', 'admin@office.com', 'admin'),
+(2, 'user1', 'user123', 'user1@office.com', 'user'),
+(3, 'user', '111111', 'vladimirpronicev56@gmail.com', 'user'),
+(4, 'swoks', '123456', 'vladproni4ev@yandex.ru', 'user'),
+(5, 'testuser', '123456', 'test@test.com', 'user'),
+(6, 'wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww', '111111', 'KondratevaTV@mail.ru', 'user'),
+(7, 'xxx', 'Vvr-BsT-PHH-5j9', 'vladproni5ev@yandex.ru', 'user'),
+(8, 'dima', '111111', 'dima@mail.ru', 'user'),
+(9, 'vova', '111111', 'vova@mail.ru', 'user'),
+(10, 'user111', '111111', 'user111@gmail.com', 'user');
 
 -- Сброс счетчика ID для users
 SELECT setval('users_id_seq', 10);
