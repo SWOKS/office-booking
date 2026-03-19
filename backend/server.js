@@ -334,8 +334,8 @@ app.post('/api/auth/login', async (req, res) => {
  */
 app.post('/api/auth/register', async (req, res) => {
   try {
-    const { username, password, email, name } = req.body;
-    if (!username || !password || !email || !name) {
+    const { username, password, email} = req.body;
+    if (!username || !password || !email) {
       return res.status(400).json({ error: 'Не все поля заполнены' });
     }
 
@@ -349,9 +349,9 @@ app.post('/api/auth/register', async (req, res) => {
     }
 
     const result = await pool.query(
-      `INSERT INTO users (username, password, email, name, role)
-       VALUES ($1, $2, $3, $4, 'user') RETURNING id, username, email, name, role, created_at`,
-      [username, password, email, name]
+      `INSERT INTO users (username, password, email, role)
+       VALUES ($1, $2, $3, $4, 'user') RETURNING id, username, email, role, created_at`,
+      [username, password, email]
     );
 
     res.status(201).json(result.rows[0]);
@@ -379,7 +379,7 @@ app.post('/api/auth/register', async (req, res) => {
  */
 app.get('/api/users', async (req, res) => {
   try {
-    const result = await pool.query('SELECT id, username, email, name, role, created_at FROM users ORDER BY id');
+    const result = await pool.query('SELECT id, username, email, role, created_at FROM users ORDER BY id');
     res.json(result.rows);
   } catch (error) {
     console.error(error);
@@ -405,7 +405,7 @@ app.get('/api/users', async (req, res) => {
 app.get('/api/auth/user/:id', async (req, res) => {
   try {
     const result = await pool.query(
-      'SELECT id, username, email, name, role, created_at FROM users WHERE id = $1',
+      'SELECT id, username, email, role, created_at FROM users WHERE id = $1',
       [parseInt(req.params.id)]
     );
     if (result.rows.length > 0) {
