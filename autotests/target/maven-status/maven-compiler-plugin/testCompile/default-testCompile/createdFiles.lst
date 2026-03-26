@@ -1,7 +1,0 @@
-base\BaseTest.class
-pages\BasePage.class
-steps\LoginSteps.class
-pages\LoginPage.class
-utils\DriverFactory.class
-tests\LoginTest.class
-utils\WaitUtils.class
