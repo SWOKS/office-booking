@@ -18,7 +18,6 @@ public class LoginSteps {
         loginPage.enterUsername(username);
         loginPage.enterPassword(password);
         loginPage.clickLogin();
-
     }
 
 }
