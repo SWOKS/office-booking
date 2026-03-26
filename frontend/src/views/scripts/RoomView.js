@@ -96,7 +96,7 @@ export default {
           body: JSON.stringify({
             roomId: this.room.id,
             userId: currentUser.id,
-            userName: currentUser.name,
+            username: currentUser.username,
             roomName: this.room.name,
             date: this.bookingData.date,
             startTime: this.bookingData.startTime,

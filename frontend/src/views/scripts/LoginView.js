@@ -30,7 +30,7 @@ export default {
         const data = await response.json();
         if (response.ok) {
           this.store.login(data);
-          alert(`Добро пожаловать, ${data.name}!`);
+          alert(`Добро пожаловать, ${data.username}!`);
           this.$router.push("/");
         } else {
           this.error = data.error || "Ошибка входа";
