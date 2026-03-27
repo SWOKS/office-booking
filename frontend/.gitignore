@@ -2,7 +2,6 @@
 node_modules
 /dist
 
-
 # local env files
 .env.local
 .env.*.local
@@ -21,3 +20,14 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Allure результаты (если не нужны в репозитории)
+allure-results/
