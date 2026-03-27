@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DriverFactory {
 
@@ -22,8 +24,15 @@ public class DriverFactory {
                     options.addArguments("--headless");
                 }
 
+                Map<String, Object> prefs = new HashMap<>();
+                prefs.put("profile.password_manager_leak_detection", false);
+                prefs.put("credentials_enable_service", false);
+                options.setExperimentalOption("prefs", prefs);
+                options.addArguments("--disable-save-password-bubble");
+
                 driver = new ChromeDriver(options);
                 driver.manage().window().maximize();
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             }
         }
 

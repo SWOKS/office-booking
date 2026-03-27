@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,7 +23,7 @@ public class LoginPage extends BasePage {
     @FindBy(css = "button[type='submit']")
     private WebElement loginButton;
 
-    @FindBy(css = ".user-name")
+    @FindBy(css = "span.user-name")
     private WebElement userNameLabel;
 
     public void navigateToLoginPage() {
@@ -46,6 +47,7 @@ public class LoginPage extends BasePage {
     }
 
     public boolean isUserLoggedIn() {
+        wait.waitForVisibility(userNameLabel);
         return userNameLabel.isDisplayed();
     }
 
