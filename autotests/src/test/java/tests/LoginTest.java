@@ -15,6 +15,7 @@ public class LoginTest extends BaseTest {
         LoginSteps loginSteps = new LoginSteps(driver);
         loginSteps.login("user1", "user123");
         assertTrue(loginSteps.isLoginSuccessful());
+
         Thread.sleep(3000);
     }
 

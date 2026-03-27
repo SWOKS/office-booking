@@ -18,7 +18,12 @@ public class LoginSteps {
         loginPage.enterUsername(username);
         loginPage.enterPassword(password);
         loginPage.clickLogin();
-
     }
+
+    @Step("Check user {username} is login in")
+    public boolean isLoginSuccessful(){
+        return loginPage.isUserLoggedIn();
+    }
+
 
 }
