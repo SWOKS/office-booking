@@ -53,7 +53,7 @@ const formatBooking = (booking) => ({
   id: booking.id,
   roomId: booking.room_id,
   userId: booking.user_id,
-  userName: booking.username,
+  username: booking.username,
   roomName: booking.room_name,
   date: formatDate(booking.date),
   startTime: formatTime(booking.start_time),
@@ -191,9 +191,9 @@ app.get('/api/bookings', async (req, res) => {
  */
 app.post('/api/bookings', async (req, res) => {
   try {
-    const { roomId, userId, userName, roomName, date, startTime, endTime } = req.body;
+    const { roomId, userId, username, roomName, date, startTime, endTime } = req.body;
 
-    if (!roomId || !userId || !userName || !roomName || !date || !startTime || !endTime) {
+    if (!roomId || !userId || !username || !roomName || !date || !startTime || !endTime) {
       return res.status(400).json({ error: 'Не все необходимые поля заполнены' });
     }
 
@@ -220,7 +220,7 @@ app.post('/api/bookings', async (req, res) => {
     const result = await pool.query(
       `INSERT INTO bookings (room_id, user_id, username, room_name, date, start_time, end_time, status, created_at)
        VALUES ($1, $2, $3, $4, $5, $6, $7, 'confirmed', NOW()) RETURNING *`,
-      [roomId, userId, userName, roomName, date, startTime, endTime]
+      [roomId, userId, username, roomName, date, startTime, endTime]
     );
 
     res.status(201).json(formatBooking(result.rows[0]));
